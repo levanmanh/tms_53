@@ -4,4 +4,6 @@ class Subject < ActiveRecord::Base
   has_many :tasks, dependent: :destroy
   has_many :users, through: :user_subjects
   has_many :courses, through: :course_subjects
+  
+  validates :title, presence: true, length: {maximum: 50}
 end

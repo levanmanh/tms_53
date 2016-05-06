@@ -1,6 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <nav>
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to t("static_pages.home"), root_path %></li>
+        <li><%= link_to t("subjects.subjects"), admin_subjects_path %></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("static_pages.home"), root_path %></li>
         <% if logged_in? %>
@@ -20,7 +24,7 @@
           </li>
         <% else %>
           <li><%= link_to t("static_pages.login"), login_path %></li>
-          <li><%= link_to t("static_pages.signup"), "#" %></li>
+          <li><%= link_to t("static_pages.signup"), signup_path %></li>
         <% end %>
       </ul>
     </nav>
