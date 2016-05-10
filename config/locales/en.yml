@@ -37,6 +37,14 @@ en:
 
   controller:
     message: "Invalid email/password combination"
+    create_subject_success: "Create Success!"
+    error_subject: "Error!"
+
+  views:
+    admin:
+      _subject: "Subjects"
+      create_subject: "Create Subject"
+
   create:
     message_success: "Welcome to the Framgia Training System!"
   shared:

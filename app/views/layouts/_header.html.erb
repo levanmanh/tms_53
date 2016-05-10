@@ -3,6 +3,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("static_pages.home"), root_path %></li>
+        <li><%= link_to t("subjects.subjects"), admin_subjects_path %></li>
         <% if logged_in? %>
           <li><%= link_to t("layouts.users"), "#" %></li>
           <li class="dropdown">

@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
   get "signup" => "users#new"
   resources :users, only: [:new, :create]
+
+  namespace :admin do
+    resources :subjects
+  end
 end
