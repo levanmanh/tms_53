@@ -1,0 +1,23 @@
+<% provide :title, t("static_pages.users") %>
+<div class="row">
+  <div class="col-md-4">
+    <h2><%= t "admin.edit_user_form" %></h2>
+    <%= form_for [:admin, @user] do |f| %>
+      <%= render "shared/error_messages", object: @user %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit t("admin.update_user"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

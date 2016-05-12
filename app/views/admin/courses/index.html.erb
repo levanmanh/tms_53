@@ -9,6 +9,7 @@
         <th></th>
         <th></th>
         <th></th>
+        <th></th>
       </thead>
       <tbody>
         <% @courses.each do |course| %>
@@ -21,7 +22,9 @@
             <td><%= link_to t("admin.edit_course"), edit_admin_course_path(course) %><td>
             <td><%= link_to t("admin.add_supervisor_to_course"),
               edit_admin_course_assign_trainers_path(course) %><td>
-          </tr>
+            <td><%= link_to t("admin.add_supervisor_to_course"),
+              edit_admin_course_assign_trainees_path(course) %><td> 
+            </tr>
         <% end %>
       </tbody>
     </table>
